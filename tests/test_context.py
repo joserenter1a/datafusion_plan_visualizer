@@ -12,7 +12,6 @@ from engine.context import (
     register_json,
 )
 
-
 # ── _validate_csv ─────────────────────────────────────────────────────────────
 
 
@@ -41,6 +40,7 @@ class TestValidateCsv:
     def test_unserializable_type_raises(self, tmp_path: pathlib.Path) -> None:
         """A column with complex128 dtype cannot be converted to Parquet."""
         import unittest.mock as mock
+
         import numpy as np
 
         p = tmp_path / "complex.csv"

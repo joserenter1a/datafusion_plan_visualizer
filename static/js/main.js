@@ -214,7 +214,7 @@ document.querySelectorAll(".mode-btn").forEach((btn) => {
 
 const sqlInput = document.getElementById("sql-input");
 const _INITIAL_SQL =
-  "SELECT id, product FROM recipe_table WHERE id > 2 GROUP BY id, product ORDER BY id LIMIT 4";
+  "SELECT * FROM test";
 
 sqlInput.value = _INITIAL_SQL;
 

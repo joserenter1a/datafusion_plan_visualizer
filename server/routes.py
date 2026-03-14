@@ -10,21 +10,23 @@ from fastapi import APIRouter, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-from engine import (
+from engine.context import (
+    _SUPPORTED_EXTENSIONS,
+    TableInfo,
     deregister_table,
-    diff_logical_plans,
     get_tables,
-    physical_plan,
-    physical_plan_to_cytoscape,
-    plan,
-    plan_to_cytoscape,
-    query,
     register_avro,
     register_csv,
     register_json,
 )
-from engine.context import _SUPPORTED_EXTENSIONS
-from engine.context import TableInfo
+from engine.plan import (
+    diff_logical_plans,
+    physical_plan,
+    physical_plan_to_cytoscape,
+    plan,
+    plan_to_cytoscape,
+)
+from engine.query import query
 
 _STATIC_DIR: pathlib.Path = pathlib.Path(__file__).parent.parent / "static"
 

@@ -8,7 +8,8 @@ from typing import AsyncGenerator
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
-from engine import bootstrap
+from engine import context
+
 from .routes import router
 
 _STATIC_DIR: pathlib.Path = pathlib.Path(__file__).parent.parent / "static"
@@ -22,7 +23,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     or corrupt Parquet files raise immediately — with a clear traceback in the
     server log — rather than failing silently inside a module import.
     """
-    await asyncio.to_thread(bootstrap)
+    await asyncio.to_thread(context.bootstrap)
     yield
 
 

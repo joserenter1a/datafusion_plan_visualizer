@@ -9,7 +9,6 @@ from typing import TypedDict
 import datafusion
 import pandas
 
-
 _DATA_DIR: pathlib.Path = pathlib.Path(__file__).parent.parent / "data"
 
 context: datafusion.SessionContext = datafusion.SessionContext()
@@ -272,14 +271,14 @@ def bootstrap() -> None:
             "Create the directory and add a recipe_table.csv file to get started."
         )
 
-    default_parquet = _DATA_DIR / "recipe_table.parquet"
+    default_parquet = _DATA_DIR / "test.parquet"
     if not default_parquet.exists():
-        default_csv = _DATA_DIR / "recipe_table.csv"
+        default_csv = _DATA_DIR / "test.csv"
         if not default_csv.exists():
             raise FileNotFoundError(
                 f"Default table not found: {default_csv}. "
-                "Add a recipe_table.csv to the data directory or place a "
-                "pre-converted recipe_table.parquet there instead."
+                "Add a test.csv to the data directory or place a "
+                "pre-converted test.parquet there instead."
             )
         pandas.read_csv(default_csv).to_parquet(default_parquet)
 

@@ -3,10 +3,9 @@
 import pathlib
 import textwrap
 
+import datafusion
 import pandas
 import pytest
-import datafusion
-
 
 # ── Isolated SessionContext ───────────────────────────────────────────────────
 
