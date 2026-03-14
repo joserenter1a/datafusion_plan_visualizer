@@ -4,7 +4,7 @@ An interactive web application for visualizing query plans produced by [Apache D
 
 **Live demo:** [datafusion-plan-visualizer.vercel.app](https://datafusion-plan-visualizer.vercel.app)
 
-![Plan Visualizer](docs/assets/1.png)
+![Plan Visualizer](docs/assets/visualizer.png)
 
 ---
 
