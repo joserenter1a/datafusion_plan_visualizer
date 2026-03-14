@@ -26,5 +26,8 @@ dev = [
 testpaths = ["tests"]
 asyncio_mode = "auto"
 
-[too.fastapi]
+[tool.fastapi]
 entrypoint = "server.app:app"
+
+[project.scripts]
+app = "server.app:app"
