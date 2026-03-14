@@ -2,7 +2,7 @@
 
 An interactive web application for visualizing query plans produced by [Apache DataFusion](https://datafusion.apache.org/). Write SQL against uploaded tables and inspect how DataFusion's query planner decomposes it into a tree of relational operators — across all four plan representations.
 
-**Live demo:** [datafusion-plan-visualizer.vercel.app](https://datafusion-plan-visualizer.vercel.app)
+**Live demo:** [DataFusion Plan Visualizer](https://datafusion-plan-visualizer.vercel.app)
 
 ![Plan Visualizer](docs/assets/visualizer.png)
 
